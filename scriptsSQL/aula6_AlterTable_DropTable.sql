@@ -52,6 +52,22 @@ rename to peoples;
 
 select * from pessoas;
 
+CREATE TABLE IF NOT EXISTS cursos (
+	nome varchar(30) not null UNIQUE,
+	descricao text,
+	carga int UNSIGNED,
+	totaulas int,
+	ano year DEFAULT '2021'
+) DEFAULT CHARSET = utf8;
+ 
+ desc cursos;
+ 
+ ALTER TABLE cursos
+ADD COLUMN idcurso int FIRST;
+
+ALTER TABLE cursos
+ADD PRIMARY KEY(idcurso);
+
 
 
 
